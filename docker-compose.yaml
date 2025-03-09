@@ -1,0 +1,14 @@
+services:
+    static:
+        image: serve-static:latest
+        container_name: serve-static
+        ports:
+            - mode: host
+              protocol: tcp
+              published: ${PORT}
+              target: ${PORT}
+        environment:
+            - PORT=${PORT}
+            - PUBLIC_DIR=${PUBLIC_DIR}
+        volumes:
+            - ./${PUBLIC_DIR}:/app/${PUBLIC_DIR}

@@ -1,0 +1,11 @@
+.dockerignore
+.editorignore
+.git
+.gitignore
+
+public
+
+Dockerfile
+LICENSE
+app
+docker-compose.yaml
